@@ -70,14 +70,16 @@ curl -X POST -H "Content-Type: application/json" -d '{"username": "example_user"
 
   ```json
   {
-    "id": 123,
-    "name": "John Doe",
-    "class": "Math"
+    "id": 874,
+    "name": "Doe",
+    "age": 15,
+    "classes": ["Chemistry"]
   }
+  ```
   
 * **Curl Command:
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your-token>" -d '{"id": 123, "name": "John Doe", "class": "Math"}' http://localhost:8000/students
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your-token>" -d '{"id": 874, "name": "Doe", "age": 15, "classes": ["Chemistry"]}' http://localhost:8000/students
 ```
 
 
@@ -90,24 +92,27 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your
 - **Authentication:** Accessible for all authenticated users.
 - **Response:** Returns a list of students in the specified class.
 
-  ```json
+   ```json
   [
     {
-      "id": 123,
-      "name": "John Doe",
-      "class": "Math"
+      "id":234,
+      "name":"John",
+      "age":15,
+      "classes":["Math"]
     },
     {
-      "id": 124,
-      "name": "Jane Smith",
-      "class": "Math"
+      "id":579,
+      "name":"Camilia",
+      "age":15,
+      "classes":["Math"]
     },
     ...
   ]
+  ```
   
 * **Curl Command:
 ```bash
-curl -X GET -H "Authorization: Bearer <your-token>" http://localhost:8000/students/Math
+curl -X GET -H "Authorization: Bearer <your-token>" http://localhost:8000/classes/Math/students
 ```
 
 
@@ -119,20 +124,23 @@ curl -X GET -H "Authorization: Bearer <your-token>" http://localhost:8000/studen
 - **Authentication:** Accessible for all authenticated users.
 - **Response:** Returns a list of all students.
 
-  ```json
+```json
   [
-    {
+   {
+      "id": 546,
+      "name": "Maya",
+      "age": 15,
+      "classes": ["Chemistry"]
+   },
+   {
       "id": 123,
-      "name": "John Doe",
-      "class": "Math"
-    },
-    {
-      "id": 124,
-      "name": "Jane Smith",
-      "class": "History"
-    },
+      "name": "Maysa",
+      "age": 20,
+      "classes": [ "Chemistry","physics"]
+   },
     ...
   ]
+```
 
 * **Curl Command:
 ```bash
@@ -150,11 +158,12 @@ curl -X GET -H "Authorization: Bearer <your-token>" http://localhost:8000/studen
 - **Response:** Returns the student with the specified ID.
 
   ```json
-  {
-    "id": 123,
-    "name": "John Doe",
-    "class": "Math"
-  }
+   {
+    "id":123,
+    "name":"Maysa",
+    "age":20,
+    "classes":["Chemistry","physics"]
+    }
   
 * **Curl Command:
 ```bash
