@@ -1,0 +1,12 @@
+{
+   "Maysa": {
+      "username": "Maysa",
+      "password": "$2b$12$0FBPIjBwB3fPmn8PIasY1OS3Yt0CSxdg4DYq2VbyRc5zPkZRRtsCa",
+      "role": "admin"
+   },
+   "John": {
+      "username": "John",
+      "password": "$2b$12$ymM3k9f8gU6O6CM.aq1zFer08yOIzXBo5qG/4MC0JL7uL5/NpcdTm",
+      "role": "guest"
+   }
+}
