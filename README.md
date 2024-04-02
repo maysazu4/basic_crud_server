@@ -1,4 +1,4 @@
-# basic_crud_server
+# Basic Crud Server
 
 This server-side application provides authentication and authorization functionality for user management. It supports sign-up, sign-in, and role-based access control for various endpoints.
 
