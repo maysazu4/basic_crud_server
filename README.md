@@ -74,6 +74,11 @@ curl -X POST -H "Content-Type: application/json" -d '{"username": "example_user"
     "name": "John Doe",
     "class": "Math"
   }
+  
+* **Curl Command:
+```bash
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your-token>" -d '{"id": 123, "name": "John Doe", "class": "Math"}' http://localhost:8000/students
+```
 
 
 ### Get Students by Class (Accessible only for Admins)
@@ -99,6 +104,11 @@ curl -X POST -H "Content-Type: application/json" -d '{"username": "example_user"
     },
     ...
   ]
+  
+* **Curl Command:
+```bash
+curl -X GET -H "Authorization: Bearer <your-token>" http://localhost:8000/students/Math
+```
 
 
 ### Get All Students
@@ -124,6 +134,11 @@ curl -X POST -H "Content-Type: application/json" -d '{"username": "example_user"
     ...
   ]
 
+* **Curl Command:
+```bash
+curl -X GET -H "Authorization: Bearer <your-token>" http://localhost:8000/students
+```
+
 
 ### Get Student by ID
 
@@ -140,6 +155,12 @@ curl -X POST -H "Content-Type: application/json" -d '{"username": "example_user"
     "name": "John Doe",
     "class": "Math"
   }
+  
+* **Curl Command:
+```bash
+curl -X GET -H "Authorization: Bearer <your-token>" http://localhost:8000/students/123
+```
+
 
 
 
