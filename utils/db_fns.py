@@ -24,7 +24,14 @@ def load_file(filename):
             return data
     except FileNotFoundError:
         return None
-        
+
+def delete_all_students_from_db():
+     with open(Students_db, "w") as file:
+        json.dump([], file, indent=3)
+
+
+
+
 def load_students_db() -> List[Student]:
     """
     Loads student data from the students database file.

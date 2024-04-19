@@ -1,51 +1,18 @@
 [
    {
-      "id": 546,
-      "name": "Maya",
+      "id": 574,
+      "name": "Mays",
       "age": 15,
       "classes": [
-         "Chemistry"
+         "Physics"
       ]
    },
    {
       "id": 123,
       "name": "Maysa",
-      "age": 20,
-      "classes": [
-         "Chemistry",
-         "physics"
-      ]
-   },
-   {
-      "id": 234,
-      "name": "John",
       "age": 15,
       "classes": [
-         "Math"
-      ]
-   },
-   {
-      "id": 579,
-      "name": "Camilia",
-      "age": 15,
-      "classes": [
-         "Math"
-      ]
-   },
-   {
-      "id": 451,
-      "name": "louis",
-      "age": 15,
-      "classes": [
-         "Math"
-      ]
-   },
-   {
-      "id": 578,
-      "name": "Sam",
-      "age": 15,
-      "classes": [
-         "Math"
+         "Physics" , "Math"
       ]
    }
 ]

@@ -78,7 +78,7 @@ def verify_jwt(user_jwt):
     try:
         SECRET_KEY = "your-secret-key"
         data = jwt.decode(user_jwt, SECRET_KEY, algorithms="HS256")
-        return data["user role"]
+        return data
     except Exception as e:
         print('e: ', e)
         print("bad token")
@@ -98,9 +98,9 @@ def check_token(request):
     if auth_header and auth_header.startswith("Bearer "):
         token = auth_header.split(" ")[1]
         try:
-            user_role = verify_jwt(token)
-            if user_role:
-                return user_role
+            data = verify_jwt(token)
+            if data:
+                return data
         except Exception as e:
             raise e
     return None
